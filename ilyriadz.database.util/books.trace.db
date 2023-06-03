@@ -1,0 +1,46 @@
+2021-10-17 10:02:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found; SQL statement:
+select * from book  [42102-200]
+2021-10-17 10:04:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "BOOK" not found; SQL statement:
+select * from book  [42102-200]
+2021-10-17 10:23:56 database: flush
+org.h2.message.DbException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/user/NetBeansProjects/ilyriadz.database.util/books.mv.db [1.4.200/7]" [50000-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:194)
+	at com.h2database@1.4.200/org.h2.message.DbException.convert(DbException.java:347)
+	at com.h2database@1.4.200/org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at com.h2database@1.4.200/org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at com.h2database@1.4.200/org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at com.h2database@1.4.200/org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at com.h2database@1.4.200/org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at com.h2database@1.4.200/org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at com.h2database@1.4.200/org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at com.h2database@1.4.200/org.h2.engine.Database.getPageStore(Database.java:2659)
+	at com.h2database@1.4.200/org.h2.engine.Database.open(Database.java:675)
+	at com.h2database@1.4.200/org.h2.engine.Database.openDatabase(Database.java:307)
+	at com.h2database@1.4.200/org.h2.engine.Database.<init>(Database.java:301)
+	at com.h2database@1.4.200/org.h2.engine.Engine.openSession(Engine.java:74)
+	at com.h2database@1.4.200/org.h2.engine.Engine.openSession(Engine.java:192)
+	at com.h2database@1.4.200/org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at com.h2database@1.4.200/org.h2.engine.Engine.createSession(Engine.java:166)
+	at com.h2database@1.4.200/org.h2.engine.Engine.createSession(Engine.java:29)
+	at com.h2database@1.4.200/org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at com.h2database@1.4.200/org.h2.Driver.connect(Driver.java:69)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:681)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:229)
+	at ilyriadz.database/ilyriadz.database.DatabaseManager.initConnection(DatabaseManager.java:68)
+	at ilyriadz.database/ilyriadz.database.DatabaseManager.load(DatabaseManager.java:75)
+	at ilyriadz.database/ilyriadz.database.DatabaseManager.connect(DatabaseManager.java:89)
+	at ilyriadz.database/ilyriadz.database.DatabaseManager.connect(DatabaseManager.java:102)
+	at ilyriadz.database.util/ilyriadz.database.util.NewJFrame.<clinit>(NewJFrame.java:30)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: General error: "java.lang.IllegalStateException: The file is locked: nio:/home/user/NetBeansProjects/ilyriadz.database.util/books.mv.db [1.4.200/7]" [50000-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 29 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:/home/user/NetBeansProjects/ilyriadz.database.util/books.mv.db [1.4.200/7]
+	at com.h2database@1.4.200/org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at com.h2database@1.4.200/org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at com.h2database@1.4.200/org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 23 more
