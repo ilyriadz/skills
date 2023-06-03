@@ -1,0 +1,30 @@
+2021-10-18 15:44:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM REFERENCES WHERE TEL=9050 LIMIT 1 ORDER[*] BY DT DESC"; SQL statement:
+select * from references where tel=9050 limit 1 order by dt desc [42000-200]
+2021-10-18 15:44:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM REFERENCES WHERE TEL=90500 LIMIT 1 ORDER[*] BY DT DESC"; SQL statement:
+select * from references where tel=90500 limit 1 order by dt desc [42000-200]
+2021-10-18 15:44:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM REFERENCES WHERE TEL=905000 LIMIT 1 ORDER[*] BY DT DESC"; SQL statement:
+select * from references where tel=905000 limit 1 order by dt desc [42000-200]
+2021-10-18 15:45:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM REFERENCES WHERE TEL=9050 LIMIT 1 ORDERBY[*] DT DESC"; SQL statement:
+select * from references where tel=9050 limit 1 orderby dt desc [42000-200]
+2021-10-18 15:45:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM REFERENCES WHERE TEL=90500 LIMIT 1 ORDERBY[*] DT DESC"; SQL statement:
+select * from references where tel=90500 limit 1 orderby dt desc [42000-200]
+2021-10-18 15:45:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM REFERENCES WHERE TEL=905000 LIMIT 1 ORDERBY[*] DT DESC"; SQL statement:
+select * from references where tel=905000 limit 1 orderby dt desc [42000-200]
+2021-10-18 15:46:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM REFERENCES WHERE TEL=9050 ORDERBY[*] DT DESC LIMIT 1 "; SQL statement:
+select * from references where tel=9050 orderby dt desc limit 1  [42000-200]
+2021-10-18 15:46:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM REFERENCES WHERE TEL=90500 ORDERBY[*] DT DESC LIMIT 1 "; SQL statement:
+select * from references where tel=90500 orderby dt desc limit 1  [42000-200]
+2021-10-18 15:46:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT * FROM REFERENCES WHERE TEL=905000 ORDERBY[*] DT DESC LIMIT 1 "; SQL statement:
+select * from references where tel=905000 orderby dt desc limit 1  [42000-200]
+2021-10-18 17:01:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from references where tel=905000 and id=0 and reference like [*]'msan-collo:1.1.1+23 limit 1"; SQL statement:
+select * from references where tel=905000 and id=0 and reference like 'msan-collo:1.1.1+23 limit 1 [42000-200]
