@@ -1,0 +1,23 @@
+2021-10-11 09:59:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "REF" not found; SQL statement:
+update telref set ref='msan-th:1.4.15' where id=3 [42122-200]
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at com.h2database@1.4.200/org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:205)
+	at com.h2database@1.4.200/org.h2.message.DbException.get(DbException.java:181)
+	at com.h2database@1.4.200/org.h2.table.Table.getColumn(Table.java:703)
+	at com.h2database@1.4.200/org.h2.command.Parser.readTableColumn(Parser.java:1274)
+	at com.h2database@1.4.200/org.h2.command.Parser.parseUpdateSetClause(Parser.java:1325)
+	at com.h2database@1.4.200/org.h2.command.Parser.parseUpdate(Parser.java:1290)
+	at com.h2database@1.4.200/org.h2.command.Parser.parsePrepared(Parser.java:1005)
+	at com.h2database@1.4.200/org.h2.command.Parser.parse(Parser.java:843)
+	at com.h2database@1.4.200/org.h2.command.Parser.parse(Parser.java:815)
+	at com.h2database@1.4.200/org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareLocal(Session.java:657)
+	at com.h2database@1.4.200/org.h2.engine.Session.prepareCommand(Session.java:595)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:164)
+	at com.h2database@1.4.200/org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:126)
+	at ilyriadz.database/ilyriadz.database.DatabaseManager.executeUpdate(DatabaseManager.java:102)
+	at ilyriadz.database/ilyriadz.database.DatabaseManager.update(DatabaseManager.java:276)
+	at ilyriadz.database/ilyriadz.database.H2Database.main(H2Database.java:54)
